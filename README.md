@@ -1,0 +1,3 @@
+The gem is a game changer... Nope! It's just Chuck TestR - Chuck's Testa RSpec formatter
+
+More to come soon...

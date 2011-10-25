@@ -1,3 +1,36 @@
-The gem is a game changer... Nope! It's just Chuck TestR - Chuck's Testa RSpec formatter
+# Chuck testr RSpec formatter
 
-More to come soon...
+The gem is a game changer... Nope! It's just **Chuck TestR - Chuck's Testa RSpec formatter**
+
+## Requirements
+
+It requires only `rspec` gem, obviously. It only works with OS X for now.
+
+## Installation
+
+If you are using bundler, add this to your `Gemfile`:
+
+    gem 'chuck_testr_formatter'
+
+Or install the gem manually with `gem install chuck_testr_formatter`.
+
+## Usage
+
+To start using the formatter you can either specify it in the rspec's command line options or add it to `.rspec` file:
+
+- With `.rspec` file
+
+Add this line to your `.rspec` file:
+
+    --format ChuckTestrFormatter
+
+- With command line options
+
+    rspec spec/* --format ChuckTestrFormatter
+
+### TODO
+
+- Add license
+- Add growl notifications
+- Specs
+- Support for Linux

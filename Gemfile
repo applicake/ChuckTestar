@@ -1,5 +1,7 @@
 source :rubygems
 
+gem 'growl_notify'
+
 group :development do
   gem "rspec"
   gem "ruby-debug19"

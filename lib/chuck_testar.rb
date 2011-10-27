@@ -19,11 +19,13 @@ class ChuckTestar < RSpec::Core::Formatters::BaseTextFormatter
   end
 
   def notify(text, icon_filename)
-    GrowlNotify.normal({
-      :title => 'RSpec',
-      :description => text,
-      :icon => icon(icon_filename)
-    })
+    if Object.const_defined? "GrowlNotify" 
+      GrowlNotify.normal({
+        :title => 'RSpec',
+        :description => text,
+        :icon => icon(icon_filename)
+      })
+    end
   end
 
   def say(text)

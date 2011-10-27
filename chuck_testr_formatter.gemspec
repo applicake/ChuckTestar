@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.6"
 
   s.add_runtime_dependency 'rspec'
+  s.add_runtime_dependency 'growl_notify'
 
   s.files = %w( README.md chuck_testr_formatter.gemspec ) + Dir["lib/**/*.rb"]
   s.test_files = Dir["spec/**/*.rb"]

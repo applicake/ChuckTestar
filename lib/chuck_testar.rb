@@ -18,6 +18,31 @@ class ChuckTestar < RSpec::Core::Formatters::BaseTextFormatter
     File.join(File.dirname(__FILE__), '../assets', name)
   end
 
+  def notify(text, icon_filename)
+    GrowlNotify.normal({
+      :title => 'RSpec',
+      :description => text,
+      :icon => icon(icon_filename)
+    })
+  end
+
+  def say(text)
+    if Portable.platform == 'linux'
+      `echo "#{text}" | espeak`
+    elsif Portable.platform == 'osx'
+      `say "#{text}"`
+    end
+  end
+
+  def notify_with_voice!(text, icon_filename)
+    notify(text, icon_filename)
+    say(text)
+  end
+
+  def delay(seconds)
+    sleep(seconds)
+  end
+
   def start(example_count)
     super(example_count)
     output.print green('Y')
@@ -26,38 +51,12 @@ class ChuckTestar < RSpec::Core::Formatters::BaseTextFormatter
   def stop
     output.print green('p')
     output.print green("\n\nYour tests pass!\n")
-    GrowlNotify.normal({
-      :title => 'RSpec',
-      :description => 'Your tests pass',
-      :icon => icon('chuck-normal.png')
-    })
-    say_ok
-    sleep(2)
+    notify_with_voice!('Your tests pass', 'chuck-normal.png')
+    delay(2)
     if @failed_examples.length > 0
       output.print magenta("\n\nNope! It's just Chuck Testa!")
-      GrowlNotify.high({
-        :title => 'RSpec',
-        :description => 'Nope! It\'s just Chuck Testa!',
-        :icon => icon('chuck-nope.png')
-      })
-      say_nope
-      sleep(1)
-    end
-  end
-
-  def say_ok
-    if Portable.platform == 'linux'
-      `echo "Your tests pass!" | espeak`
-    elsif Portable.platform == 'osx'
-      `say 'Your tests pass!'`
-    end
-  end
-
-  def say_nope
-    if Portable.platform == 'linux'
-      `echo "Nope! It's just Chuck Testa!" | espeak`
-    elsif Portable.platform == 'osx'
-      `say "Nope! It's just Chuck Testa!"`
+      notify_with_voice!("Nope! It\'s just Chuck Testa!", 'chuck-nope.png')
+      delay(1)
     end
   end
 

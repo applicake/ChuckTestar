@@ -15,7 +15,7 @@ Spork.prefork do
     require file
   end
 
-  require 'chuck_testr_formatter'
+  require 'chuck_testr'
 end
 
 Spork.each_run do

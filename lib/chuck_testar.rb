@@ -13,7 +13,7 @@ module Portable
   end
 end
 
-class ChuckTestrFormatter < RSpec::Core::Formatters::BaseTextFormatter
+class ChuckTestar < RSpec::Core::Formatters::BaseTextFormatter
   def icon(name)
     File.join(File.dirname(__FILE__), '../assets', name)
   end
@@ -26,12 +26,20 @@ class ChuckTestrFormatter < RSpec::Core::Formatters::BaseTextFormatter
   def stop
     output.print green('p')
     output.print green("\n\nYour tests pass!\n")
-    GrowlNotify.normal(:title => 'RSpec', :description => 'Your tests pass', :icon => icon('chuck-normal.png'))
+    GrowlNotify.normal({
+      :title => 'RSpec',
+      :description => 'Your tests pass',
+      :icon => icon('chuck-normal.png')
+    })
     say_ok
     sleep(2)
     if @failed_examples.length > 0
       output.print magenta("\n\nNope! It's just Chuck Testa!")
-      GrowlNotify.high(:title => 'RSpec', :description => 'Nope! It\'s just Chuck Testa!', :icon => icon('chuck-nope.png'))
+      GrowlNotify.high({
+        :title => 'RSpec',
+        :description => 'Nope! It\'s just Chuck Testa!',
+        :icon => icon('chuck-nope.png')
+      })
       say_nope
       sleep(1)
     end

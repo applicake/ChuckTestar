@@ -10,7 +10,7 @@ It requires only `rspec` gem, obviously. It only works with OS X for now.
 
 If you are using bundler, add this to your `Gemfile`:
 
-    gem 'chuck_testr_formatter'
+    gem 'ChuckTestR'
 
 Or install the gem manually with `gem install chuck_testr_formatter`.
 
@@ -22,11 +22,11 @@ To start using the formatter you can either specify it in the rspec's command li
 
 Add this line to your `.rspec` file:
 
-    --format ChuckTestrFormatter
+    --format ChuckTestR
 
 - With command line options
 
-    rspec spec/* --format ChuckTestrFormatter
+    rspec spec/* --format ChuckTestR
 
 ### TODO
 

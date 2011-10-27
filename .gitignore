@@ -1,5 +1,4 @@
 .rvmrc
-chuck_testr_formatter-*.gem
-
 # vim temp files
 *.swp
+chuck-testar-*.gem

@@ -6,9 +6,17 @@ class ChuckTestrFormatter < RSpec::Core::Formatters::BaseTextFormatter
     File.join(File.dirname(__FILE__), '../assets', name)
   end
 
-  def notify!(title, icon_filename)
-    GrowlNotify.normal(:title => 'RSpec', :description => title, :icon => icon(icon_filename))
-    `say 'Your tests pass!'`
+  def notify(text, icon_filename)
+    GrowlNotify.normal(:title => 'RSpec', :description => text, :icon => icon(icon_filename))
+  end
+
+  def say(text)
+    `say "#{text}"`
+  end
+
+  def notify_with_voice!(text, icon_filename)
+    notify(text, icon_filename)
+    say(text)
   end
 
   def delay(seconds)
@@ -23,12 +31,11 @@ class ChuckTestrFormatter < RSpec::Core::Formatters::BaseTextFormatter
   def stop
     output.print green('p')
     output.print green("\n\nYour tests pass!\n")
-    notify!('Your tests pass', 'chuck-normal.png')
+    notify_with_voice!('Your tests pass', 'chuck-normal.png')
     delay(2)
     if @failed_examples.length > 0
       output.print magenta("\n\nNope! It's just Chuck Testa!")
-      notify!('Nope! It\'s just Chuck Testa!', 'chuck-nope.png')
-      `say "Nope! It's just Chuck Testa!"`
+      notify_with_voice!("Nope! It\'s just Chuck Testa!", 'chuck-nope.png')
       delay(1)
     end
   end

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe ChuckTestrFormatter do
+describe ChuckTestar do
   let(:output)    { StringIO.new }
-  let(:formatter) { ChuckTestrFormatter.new(output) }
+  let(:formatter) { ChuckTestar.new(output) }
 
   before do
     formatter.stub(:delay => true)

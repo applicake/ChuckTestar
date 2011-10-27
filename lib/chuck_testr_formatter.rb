@@ -1,17 +1,37 @@
 require 'rspec/core/formatters/base_text_formatter'
 require 'notifications/growl'
 
+module Portable
+  def self.platform
+    if RbConfig::CONFIG['host_os'] =~ /mswin|windows|cygwin/i
+      'windows'
+    elsif RbConfig::CONFIG['host_os'] =~ /darwin/
+      'osx'
+    else
+      'linux'
+    end
+  end
+end
+
 class ChuckTestrFormatter < RSpec::Core::Formatters::BaseTextFormatter
   def icon(name)
     File.join(File.dirname(__FILE__), '../assets', name)
   end
 
   def notify(text, icon_filename)
-    GrowlNotify.normal(:title => 'RSpec', :description => text, :icon => icon(icon_filename))
+    GrowlNotify.normal({
+      :title => 'RSpec',
+      :description => text,
+      :icon => icon(icon_filename)
+    })
   end
 
   def say(text)
-    `say "#{text}"`
+    if Portable.platform == 'linux'
+      `echo "#{text}" | espeak`
+    elsif Portable.platform == 'osx'
+      `say "#{text}"`
+    end
   end
 
   def notify_with_voice!(text, icon_filename)

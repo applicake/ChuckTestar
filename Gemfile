@@ -4,7 +4,8 @@ gem 'growl_notify'
 
 group :development do
   gem "rspec"
-  gem "ruby-debug19"
+  gem "ruby-debug19" if RUBY_VERSION =~ /1.9/
+  gem "ruby-debug" if RUBY_VERSION =~ /1.8/
   gem "awesome_print"
   gem "interactive_editor"
   gem 'rb-fsevent'

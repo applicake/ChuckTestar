@@ -1,95 +1,76 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset='utf-8'>
-
-  <title>applicake/ChuckTestar @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #afd34d;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #502cb2; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #502cb2; }
-    h3 { text-align: center; color: #502cb2; }
-    a { color: #502cb2; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
-
-<body>
-  <a href="http://github.com/applicake/ChuckTestar"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/applicake/ChuckTestar/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/applicake/ChuckTestar/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="javascript/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="javascript/script.js"></script>
+    <title>ChuckTestar</title>
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <h1>ChuckTestar</h1>
+        <p id="subtitle">
+          This gem is a game changer...
+        </p>
+        <p id="nope" style="display: none">
+          <em>Nope!</em> It's just an Rspec formatter
+        </p>
+      </header>
+      <section id="instructions">
+        <ul>
+          <li>
+            <span class="step">
+              Add this to your Gemfile:
+            </span>
+            <code>$ gem 'ChuckTestar'</code>
+          </li>
+          <li>
+            <span class="step">
+              ... and run it:
+            </span>
+            <code>
+              $ bundle exec rspec spec/* --format ChuckTestar
+            </code>
+          </li>
+        </ul>
+      </section>
+      <div id="credits">
+        <div id="download">
+          <h2>Download the real thing:</h2>
+          <p>
+            Get this project in either <a href="#">zip</a> or <a href="#">tar</a> formats, <br/>
+            or you can clone the project with Git by running:
+            <code>
+              $ git clone https://github.com/applicake/ChuckTestar.git
+            </code>
+          </p>
+        </div>
+        <div id="authors">
+          <h2>Taxidermized by:</h2>
+          <dl>
+            <dt>Felipe Elias Phillip</dt>
+            <dd>felipe@applicake.com</dd>
+            <dt>Mariusz Lusiak</dt>
+            <dd>mariusz@applicake.com</dd>
+          </dl>
+        </div>
+      </div>
     </div>
-
-    <h1><a href="http://github.com/applicake/ChuckTestar">ChuckTestar</a>
-      <span class="small">by <a href="http://github.com/applicake">applicake</a></span></h1>
-
-    <div class="description">
-      Chuck's Testa RSpec formatter
-    </div>
-
-    <p>The gem is a game changer... Nope! It's just a Rspec formatter</p><h2>Install</h2>
-<p>coming..</p>
-<h2>Authors</h2>
-<p>Felipe Elias Philipp (felipe@applicake.com)
-<br/>Mariusz Lusiak (mariusz@applicake.com)
-<br/>      </p>
-<h2>Contact</h2>
-<p>Applicake (web@applicake.com)
-<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/applicake/ChuckTestar/zipball/master">zip</a> or
-      <a href="http://github.com/applicake/ChuckTestar/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/applicake/ChuckTestar</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/applicake/ChuckTestar">applicake/ChuckTestar</a>
-    </div>
-
-  </div>
-  
-</body>
+    <footer>
+      <p id="contact">
+        Contact:
+        <a href="mailto:web@applicake.com">
+          chuck@applicake.com
+        </a>
+      </p>
+      <p id="made_by">
+        Made by:
+        <a href="http://applicake.com">
+          Applicake
+        </a>
+      </p>
+    </footer>
+  </body>
 </html>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-24776540-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>

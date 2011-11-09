@@ -19,10 +19,10 @@ header, #credits, #instructions ul, footer {
 }
 
 #social {
-  text-align: right;
   margin-bottom: 40px;
   padding-top: 30px;
 }
+
 header h1 {
   margin-left: 71px;
   text-indent: -999px;

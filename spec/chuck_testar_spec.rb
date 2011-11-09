@@ -42,17 +42,19 @@ describe ChuckTestar do
       formatter.stub(:say => true)
     end
 
-    it "display success notification when spec pass" do
-      formatter.example_passed(example)
-      GrowlNotify.should_receive(:normal).with(:title => 'RSpec', :description => 'Your tests pass', :icon => formatter.icon('chuck-normal.png'))
-      formatter.stop
-    end
+    if ChuckTesta::Portable::osx?
+      it "display growl success notification when spec pass" do
+        formatter.example_passed(example)
+        GrowlNotify.should_receive(:normal).with(:title => 'RSpec', :description => 'Your tests pass', :icon => formatter.icon('chuck-normal.png'))
+        formatter.stop
+      end
 
-    it "display success and fail notifications when spec fail" do
-      formatter.example_failed(example)
-      GrowlNotify.should_receive(:normal).with(:title => 'RSpec', :description => 'Your tests pass', :icon => formatter.icon('chuck-normal.png'))
-      GrowlNotify.should_receive(:normal).with(:title => 'RSpec', :description => "Nope! It's just Chuck Testa!", :icon => formatter.icon('chuck-nope.png'))
-      formatter.stop
+      it "display growl success and fail notifications when spec fail" do
+        formatter.example_failed(example)
+        GrowlNotify.should_receive(:normal).with(:title => 'RSpec', :description => 'Your tests pass', :icon => formatter.icon('chuck-normal.png'))
+        GrowlNotify.should_receive(:normal).with(:title => 'RSpec', :description => "Nope! It's just Chuck Testa!", :icon => formatter.icon('chuck-nope.png'))
+        formatter.stop
+      end
     end
   end
 end

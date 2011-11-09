@@ -18,12 +18,10 @@ header, #credits, #instructions ul, footer {
   margin: 0 auto;
 }
 
-header {
-  padding-top: 80px;
-}
-
 #social {
   text-align: right;
+  margin-bottom: 40px;
+  padding-top: 30px;
 }
 header h1 {
   margin-left: 71px;

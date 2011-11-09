@@ -4,7 +4,7 @@ $:.unshift lib unless $:.include?(lib)
 require 'bundler'
 
 Gem::Specification.new do |s|
-  s.name        = "chuck-testar"
+  s.name        = "ChuckTestar"
   s.version     = '0.0.1'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Mariusz Lusiak"]

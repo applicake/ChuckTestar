@@ -21,6 +21,10 @@ header, #credits, #instructions ul, footer {
 header {
   padding-top: 80px;
 }
+
+#social {
+  text-align: right;
+}
 header h1 {
   margin-left: 71px;
   text-indent: -999px;

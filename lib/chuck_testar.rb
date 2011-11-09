@@ -73,7 +73,7 @@ class ChuckTestar < RSpec::Core::Formatters::BaseTextFormatter
 
   def say(text)
     if ChuckTesta::Portable.platform == 'linux'
-      `echo "#{text}" | espeak`
+      `echo "#{text}" | espeak 2>/dev/null`
     elsif ChuckTesta::Portable.platform == 'osx'
       `say "#{text}"`
     end

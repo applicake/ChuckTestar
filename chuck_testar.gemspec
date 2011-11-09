@@ -16,9 +16,9 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.6"
 
   s.add_runtime_dependency 'rspec'
-  s.add_runtime_dependency 'growl_notify'
+  s.add_runtime_dependency 'growl_notify' if RbConfig::CONFIG['host_os'] =~ /darwin/
 
-  s.files = %w( README.md chuck_testar.gemspec ) + Dir["lib/**/*.rb"]
+  s.files = %w( README.md chuck_testar.gemspec ) + Dir["lib/**/*.rb"] + Dir["assets/*.png"]
   s.test_files = Dir["spec/**/*.rb"]
   s.require_paths = ["lib"]
 end

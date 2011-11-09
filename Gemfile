@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'growl_notify'
+gem 'growl_notify' unless `uname` =~ /(linux|Linux)/
 
 group :development do
   gem "rspec"

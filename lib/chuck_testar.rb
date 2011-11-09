@@ -1,37 +1,80 @@
 require 'rspec/core/formatters/base_text_formatter'
-require 'notifications/growl'
+require 'notifications/growl' if RbConfig::CONFIG['host_os'] =~ /darwin/
 
-module Portable
-  def self.platform
-    if RbConfig::CONFIG['host_os'] =~ /mswin|windows|cygwin/i
-      'windows'
-    elsif RbConfig::CONFIG['host_os'] =~ /darwin/
-      'osx'
-    else
-      'linux'
+module ChuckTesta
+  class GnomeNotify
+    attr_accessor :title, :description, :icon
+
+    def initialize params={}
+      params.each { |k,v| send("#{k}=", v) }
+    end
+
+    def build_params
+      "-i #{icon} \"#{title}\" \"#{description}\""
+    end
+
+    def notify!
+      installed? ? `notify-send #{build_params}` : print_hint
+    end
+
+    def installed?
+      `which notify-send`.empty? ? false : true
+    end
+
+    private
+    def print_hint
+      `echo hint: sudo apt-get install libnotify-bin to see Chuck on your Desktop!`
+    end
+  end
+
+  module Portable
+    def self.platform
+      if RbConfig::CONFIG['host_os'] =~ /mswin|windows|cygwin/i
+        'windows'
+      elsif RbConfig::CONFIG['host_os'] =~ /darwin/
+        'osx'
+      else
+        'linux'
+      end
+    end
+
+    def self.linux?
+      ChuckTesta::Portable::platform == 'linux'
+    end
+
+    def self.osx?
+      ChuckTesta::Portable::platform == 'osx'
     end
   end
 end
 
+
+
 class ChuckTestar < RSpec::Core::Formatters::BaseTextFormatter
+
   def icon(name)
     File.join(File.dirname(__FILE__), '../assets', name)
   end
 
   def notify(text, icon_filename)
-    if Object.const_defined? "GrowlNotify" 
-      GrowlNotify.normal({
-        :title => 'RSpec',
-        :description => text,
-        :icon => icon(icon_filename)
-      })
+    notification = {
+      :title => 'RSpec',
+      :description => text,
+      :icon => icon(icon_filename)
+    }
+
+    unless ChuckTesta::Portable::linux?
+      GrowlNotify.normal(notification)
+    else
+      notifier = ChuckTesta::GnomeNotify.new(notification)
+      notifier.notify!
     end
   end
 
   def say(text)
-    if Portable.platform == 'linux'
-      `echo "#{text}" | espeak`
-    elsif Portable.platform == 'osx'
+    if ChuckTesta::Portable.platform == 'linux'
+      `echo "#{text}" | espeak 2>/dev/null`
+    elsif ChuckTesta::Portable.platform == 'osx'
       `say "#{text}"`
     end
   end

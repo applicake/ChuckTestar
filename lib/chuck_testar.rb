@@ -41,6 +41,10 @@ module ChuckTesta
     def self.linux?
       ChuckTesta::Portable::platform == 'linux'
     end
+
+    def self.osx?
+      ChuckTesta::Portable::platform == 'osx'
+    end
   end
 end
 
@@ -53,17 +57,16 @@ class ChuckTestar < RSpec::Core::Formatters::BaseTextFormatter
   end
 
   def notify(text, icon_filename)
+    notification = {
+      :title => 'RSpec',
+      :description => text,
+      :icon => icon(icon_filename)
+    }
+
     unless ChuckTesta::Portable::linux?
-      GrowlNotify.normal({
-                           :title => 'RSpec',
-                           :description => text,
-                           :icon => icon(icon_filename)
-                         })
+      GrowlNotify.normal(notification)
     else
-      notifier = ChuckTesta::GnomeNotify
-        .new({ :title => "Rspec",
-               :description => text,
-               :icon => icon(icon_filename) })
+      notifier = ChuckTesta::GnomeNotify.new(notification)
       notifier.notify!
     end
   end

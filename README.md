@@ -28,3 +28,6 @@ Add this line to your `.rspec` file:
 
     rspec spec/* --format ChuckTestar
 
+## License
+ChuckTestar is released under the MIT license
+

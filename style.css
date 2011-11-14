@@ -13,7 +13,7 @@ body, #instructions ul{
   padding-bottom: 25px;
 }
 
-header, #credits, #instructions ul, footer {
+#header, #credits, #instructions ul, #footer {
   width: 700px;
   margin: 0 auto;
 }
@@ -23,7 +23,11 @@ header, #credits, #instructions ul, footer {
   padding-top: 30px;
 }
 
-header h1 {
+#social * {
+  vertical-align: bottom;
+}
+
+#header h1 {
   margin-left: 71px;
   text-indent: -999px;
   overflow: hidden;
@@ -32,7 +36,7 @@ header h1 {
   background: url('images/chucktestar_logo.png') top left no-repeat;
 }
 
-header p {
+#header p {
   text-align: center;
   font-size: 20px;
   letter-spacing: 1px;
@@ -43,7 +47,7 @@ header p {
   color: #897e5e;
 }
 
-header em {
+#header em {
   font-weight: bold;
   font-style: normal;
 }
@@ -181,12 +185,12 @@ header em {
 }
 
 #download {
-  width: 444px;
+  width: 460px;
   margin-right: 65px;
 }
 
 #authors {
-  width: 186px;
+  width: 170px;
 }
 
 #download h2, #authors h2 {
@@ -217,13 +221,12 @@ header em {
   margin-top: 9px;
 }
 
-
 #download code {
   margin-top: 16px;
   display: block;
   background-color: #4e4732;
   color: white;
-  padding: 0 16px;
+  padding: 0 10px;
   line-height: 46px;
   font-family: courier;
   font-size: 12px;
@@ -240,12 +243,12 @@ header em {
   font-weight: bold;
 }
 
-footer p {
+#footer p {
   display: inline-block;
   color: #4e4732;
 }
 
-footer p a {
+#footer p a {
   color: #aea486;
   text-decoration: none;
   line-height: 35px;

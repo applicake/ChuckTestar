@@ -4,8 +4,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="javascript/jquery-1.7.min.js"></script>
-    <script type="text/javascript" src="javascript/script.js"></script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <!-- [if gt IE8]>
+      <script type="text/javascript" src="javascript/script.js"></script>
+    < [endif]-->
     <meta property="og:title" content="A game changing gem?" />
     <meta property="og:url" content="http://chucktestar.com" />
     <meta property="og:image" content="http://chucktestar.com/images/pigbird.png" />
@@ -19,8 +21,8 @@
   </head>
   <body>
     <div id="content">
-      <header>
-      <div id="social">
+      <div id="header">
+        <div id="social">
           <div style="height: 20px; display: inline-block;">
             <div class="g-plusone" data-size="tall" data-annotation="none"></div>
           </div>
@@ -36,8 +38,8 @@
         <p id="nope" style="display: none">
           <em>Nope!</em> It's just an Rspec formatter
         </p>
-      </header>
-      <section id="instructions">
+      </div>
+      <div id="instructions">
         <ul>
           <li>
             <span class="step">
@@ -54,7 +56,7 @@
             </code>
           </li>
         </ul>
-      </section>
+      </div>
       <div id="credits">
         <div id="download">
           <h2>Download the real thing:</h2>
@@ -77,7 +79,7 @@
         </div>
       </div>
     </div>
-    <footer>
+    <div id="footer">
       <p id="contact">
         Contact:
         <a href="mailto:web@applicake.com">

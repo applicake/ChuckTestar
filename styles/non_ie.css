@@ -1,0 +1,152 @@
+#pigbird.hover {
+  -webkit-animation-name: pigbird;
+  -moz-animation-name: pigbird;
+  -o-animation-name: pigbird;
+  animation-name: pigbird;
+}
+
+#crocoduck.hover {
+  -webkit-animation-name: crocoduck;
+  -moz-animation-name: crocoduck;
+  -o-animation-name: crocoduck;
+  animation-name: crocoduck;
+}
+
+#squieagle.hover {
+  -webkit-animation-name: squieagle;
+  -moz-animation-name: squieagle;
+  -o-animation-name: squieagle;
+  animation-name: squieagle;
+}
+
+#pigbird.hover, #crocoduck.hover, #squieagle.hover {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: linear;
+  -o-animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes pigbird{
+  10% {background-position: 135px 155px;}
+  20% {background-position: 102px 148px;}
+  30% {background-position: 94px 132px;}
+  40% {background-position: 85px 129px}
+  50% {background-position: 76px 126px;}
+  60% {background-position: 56px 124px;}
+  70% {background-position: 32px 122px;}
+  80% {background-position: 27px 121px;}
+  90% {background-position: 20px 120px;}
+  100% {background-position: 10px 120px;}
+}
+
+@-moz-keyframes pigbird{
+  10% {background-position: 135px 155px;}
+  20% {background-position: 102px 148px;}
+  30% {background-position: 94px 132px;}
+  40% {background-position: 85px 129px}
+  50% {background-position: 76px 126px;}
+  60% {background-position: 56px 124px;}
+  70% {background-position: 32px 122px;}
+  80% {background-position: 27px 121px;}
+  90% {background-position: 20px 120px;}
+  100% {background-position: 10px 120px;}
+}
+
+@-o-keyframes pigbird{
+  10% {background-position: 135px 155px;}
+  20% {background-position: 102px 148px;}
+  30% {background-position: 94px 132px;}
+  40% {background-position: 85px 129px}
+  50% {background-position: 76px 126px;}
+  60% {background-position: 56px 124px;}
+  70% {background-position: 32px 122px;}
+  80% {background-position: 27px 121px;}
+  90% {background-position: 20px 120px;}
+  100% {background-position: 10px 120px;}
+}
+
+@-webkit-keyframes crocoduck{
+  10% {background-position: 723px 140px;}
+  20% {background-position: 735px 140px;}
+  30% {background-position: 764px 111px;}
+  40% {background-position: 777px 91px;}
+  50% {background-position: 789px 87px;}
+  60% {background-position: 796px 74px;}
+  70% {background-position: 811px 62px;}
+  80% {background-position: 833px 49px;}
+  90% {background-position: 845px 39px;}
+  100% {background-position: 860px 30px;}
+}
+
+@-moz-keyframes crocoduck{
+  10% {background-position: 723px 140px;}
+  20% {background-position: 735px 140px;}
+  30% {background-position: 764px 111px;}
+  40% {background-position: 777px 91px;}
+  50% {background-position: 789px 87px;}
+  60% {background-position: 796px 74px;}
+  70% {background-position: 811px 62px;}
+  80% {background-position: 833px 49px;}
+  90% {background-position: 845px 39px;}
+  100% {background-position: 860px 30px;}
+}
+
+@-o-keyframes crocoduck{
+  10% {background-position: 723px 140px;}
+  20% {background-position: 735px 140px;}
+  30% {background-position: 764px 111px;}
+  40% {background-position: 777px 91px;}
+  50% {background-position: 789px 87px;}
+  60% {background-position: 796px 74px;}
+  70% {background-position: 811px 62px;}
+  80% {background-position: 833px 49px;}
+  90% {background-position: 845px 39px;}
+  100% {background-position: 860px 30px;}
+}
+
+@-webkit-keyframes squieagle{
+  10% {background-position: 705px 207px;}
+  20% {background-position: 721px 207px;}
+  30% {background-position: 743px 223px;}
+  40% {background-position: 756px 242px;}
+  50% {background-position: 760px 251px;}
+  60% {background-position: 765px 257px;}
+  70% {background-position: 771px 263px;}
+  80% {background-position: 779px 271px;}
+  90% {background-position: 782px 274px;}
+  100% {background-position: 790px 270px;}
+}
+
+@-moz-keyframes squieagle{
+  10% {background-position: 705px 207px;}
+  20% {background-position: 721px 207px;}
+  30% {background-position: 743px 223px;}
+  40% {background-position: 756px 242px;}
+  50% {background-position: 760px 251px;}
+  60% {background-position: 765px 257px;}
+  70% {background-position: 771px 263px;}
+  80% {background-position: 779px 271px;}
+  90% {background-position: 782px 274px;}
+  100% {background-position: 790px 270px;}
+}
+
+@-o-keyframes squieagle{
+  10% {background-position: 705px 207px;}
+  20% {background-position: 721px 207px;}
+  30% {background-position: 743px 223px;}
+  40% {background-position: 756px 242px;}
+  50% {background-position: 760px 251px;}
+  60% {background-position: 765px 257px;}
+  70% {background-position: 771px 263px;}
+  80% {background-position: 779px 271px;}
+  90% {background-position: 782px 274px;}
+  100% {background-position: 790px 270px;}
+}

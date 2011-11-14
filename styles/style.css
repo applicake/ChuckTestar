@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body, #instructions ul{
+  background-color: #201d13;
+}
+
+#content {
+  background-color: #6C6342;
+  padding-bottom: 25px;
+}
+
+#header, #credits, #instructions ul, #footer {
+  width: 700px;
+  margin: 0 auto;
+}
+
+#social {
+  margin-bottom: 40px;
+  padding-top: 30px;
+}
+
+#social * {
+  vertical-align: bottom;
+}
+
+#header h1 {
+  margin-left: 71px;
+  text-indent: -999px;
+  overflow: hidden;
+  width: 558px;
+  height: 62px;
+  background: url('../images/chucktestar_logo.png') top left no-repeat;
+}
+
+#header p {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#subtitle {
+  color: #897e5e;
+}
+
+#header em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+#pigbird, #crocoduck, #squieagle {
+  width: 1200px;
+  background-repeat: no-repeat;
+  transition-property: background-position;
+  transition-duration: 1s;
+  -webkit-transition-property: background-position;
+  -webkit-transition-duration: 1s;
+  -o-transition-property: background-position;
+  -o-transition-duration: 1s;
+  -moz-transition-property: background-position;
+  -moz-transition-duration: 1s;
+}
+
+#pigbird {
+  margin: -190px auto 0 auto;
+  background-image: url('../images/pigbird.png');
+  background-position: 150px 160px;
+}
+
+
+#crocoduck {
+  background-image: url('../images/crocoduck.png');
+  background-position: 710px 140px;
+}
+
+#squieagle {
+  padding: 190px 0 164px 0;
+  background-image: url('../images/squieagle.png');
+  background-position: 700px 200px;
+}
+
+
+#instructions {
+  color: white;
+  width: 1200px;
+}
+
+#instructions ul {
+  padding: 41px 0;
+  list-style-type: none;
+}
+
+#instructions li {
+  line-height: 46px;
+  padding: 0 41px;
+}
+
+#instructions li:first-child {
+  margin-bottom: 32px;
+}
+
+#instructions .step {
+  display: inline-block;
+  width: 175px;
+  font-size: 16px;
+}
+
+#instructions code {
+  display: inline-block;
+  width: 400px;
+  padding: 0 16px;
+  background-color: black;
+  font-family: courier;
+  font-size: 14px;
+}
+
+#credits {
+  margin-top: -164px;
+}
+
+#download, #authors {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#download {
+  width: 460px;
+  margin-right: 65px;
+}
+
+#authors {
+  width: 170px;
+}
+
+#download h2, #authors h2 {
+  font-size: 16px;
+  color: #897e5e;
+  font-weight: normal;
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+
+#download p {
+  line-height: 36px;
+  margin-top: 4px;
+}
+
+#download a {
+  color: #FED500;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#download a:hover {
+  text-decoration: underline;
+}
+
+
+#authors dl {
+  margin-top: 9px;
+}
+
+#download code {
+  margin-top: 16px;
+  display: block;
+  background-color: #4e4732;
+  color: white;
+  padding: 0 10px;
+  line-height: 46px;
+  font-family: courier;
+  font-size: 12px;
+}
+
+#authors dt, #authors dd{
+  width: 186px;
+  display: block;
+  margin-left: 0;
+  line-height: 26px;
+}
+
+#authors dt {
+  font-weight: bold;
+}
+
+#footer p {
+  display: inline-block;
+  color: #4e4732;
+}
+
+#footer p a {
+  color: #aea486;
+  text-decoration: none;
+  line-height: 35px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+#contact{
+  width: 438px;
+}
+
+#made_by a {
+  display: inline-block;
+  width: 176px;
+  height: 35px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url('../images/appli_logo.png') top left no-repeat;
+}
+

@@ -1,11 +1,13 @@
 function mousein() {
-  $("#subtitle, #nope").toggle();
-  $("#instructions").addClass("hover");
+  $("#subtitle").hide();
+  $("#nope").show();
+  $("#pigbird, #crocoduck, #squieagle").addClass("hover");
 }
 
 function mouseout() {
-  $("#subtitle, #nope").toggle();
-  $("#instructions").removeClass("hover");
+  $("#subtitle").show();
+  $("#nope").hide();
+  $("#pigbird, #crocoduck, #squieagle").removeClass("hover");
 }
 
 $(function() {

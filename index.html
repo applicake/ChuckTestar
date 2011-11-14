@@ -2,12 +2,13 @@
 <html itemscope itemtype="http://schema.org/Product">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <!--[if !IE]> -->
+      <link rel="stylesheet" href="styles/non_ie.css" type="text/css">
+    <!-- <![endif]-->
     <script type="text/javascript" src="javascript/jquery-1.7.min.js"></script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <!-- [if gt IE8]>
-      <script type="text/javascript" src="javascript/script.js"></script>
-    < [endif]-->
+    <script type="text/javascript" src="javascript/script.js"></script>
     <meta property="og:title" content="A game changing gem?" />
     <meta property="og:url" content="http://chucktestar.com" />
     <meta property="og:image" content="http://chucktestar.com/images/pigbird.png" />
@@ -39,23 +40,29 @@
           <em>Nope!</em> It's just an Rspec formatter
         </p>
       </div>
-      <div id="instructions">
-        <ul>
-          <li>
-            <span class="step">
-              Add this to your Gemfile:
-            </span>
-            <code>$ gem 'ChuckTestar'</code>
-          </li>
-          <li>
-            <span class="step">
-              ... and run it:
-            </span>
-            <code>
-              $ bundle exec rspec spec/* --format ChuckTestar
-            </code>
-          </li>
-        </ul>
+      <div id="pigbird">
+        <div id="crocoduck">
+          <div id="squieagle">
+            <div id="instructions">
+              <ul>
+                <li>
+                  <span class="step">
+                    Add this to your Gemfile:
+                  </span>
+                  <code>$ gem 'ChuckTestar'</code>
+                </li>
+                <li>
+                  <span class="step">
+                    ... and run it:
+                  </span>
+                  <code>
+                    $ bundle exec rspec spec/* --format ChuckTestar
+                  </code>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="credits">
         <div id="download">

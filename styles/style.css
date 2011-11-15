@@ -113,6 +113,7 @@ body, #instructions ul{
   display: inline-block;
   width: 400px;
   padding: 0 16px;
+  margin-left: 7px;
   background-color: black;
   font-family: courier;
   font-size: 14px;

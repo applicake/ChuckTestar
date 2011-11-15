@@ -11,5 +11,5 @@ function mouseout() {
 }
 
 $(function() {
-  $("#instructions ul").hover(mousein, mouseout);
+  $("#instructions ul, #header p").hover(mousein, mouseout);
 })

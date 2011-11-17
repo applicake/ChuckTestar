@@ -23,9 +23,15 @@ body, #instructions ul{
   padding-top: 30px;
 }
 
-#social * {
-  vertical-align: bottom;
+#social .share_button > * {
+  vertical-align: top
 }
+
+#social .google {
+  position: relative;
+  top: 1px;
+}
+
 
 #header h1 {
   margin-left: 71px;

@@ -8,7 +8,7 @@ group :development do
   gem "ruby-debug" if RUBY_VERSION =~ /1.8/
   gem "awesome_print"
   gem "interactive_editor"
-  gem 'rb-fsevent'
+  gem 'rb-fsevent' unless `uname` =~ /(linux|Linux)/
   gem 'guard'
   gem 'guard-rspec'
 end

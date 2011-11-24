@@ -1,5 +1,6 @@
 .rvmrc
 # vim temp files
 *.swp
-chuck-testar-*.gem
+ChuckTestar-*.gem
 *~
+Gemfile.lock

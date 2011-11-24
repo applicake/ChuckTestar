@@ -1,6 +1,6 @@
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
-require 'ChuckTestar/version'
+require 'chuck_testar/version'
 
 require 'bundler'
 

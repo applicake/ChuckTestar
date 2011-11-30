@@ -42,7 +42,7 @@ describe ChuckTestar do
       formatter.stub(:say => true)
     end
 
-    if ChuckTesta::Portable::osx?
+    if ChuckTesta::Portable::osx? && defined?(GrowlNotify)
       it "display growl success notification when spec pass" do
         formatter.example_passed(example)
         GrowlNotify.should_receive(:normal).with(:title => 'RSpec', :description => 'Your tests pass', :icon => formatter.icon('chuck-normal.png'))

@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.6"
 
   s.add_runtime_dependency 'rspec'
-  s.add_runtime_dependency 'growl_notify' if RbConfig::CONFIG['host_os'] =~ /darwin/
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'ruby-debug19' if RUBY_VERSION =~ /1.9/

@@ -64,7 +64,7 @@ class ChuckTestar < RSpec::Core::Formatters::BaseTextFormatter
     }
 
     unless ChuckTesta::Portable::linux?
-      GrowlNotify.normal(notification)
+      GrowlNotify.normal(notification) if defined? GrowlNotify
     else
       notifier = ChuckTesta::GnomeNotify.new(notification)
       notifier.notify!

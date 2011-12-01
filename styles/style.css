@@ -174,7 +174,7 @@ body, #instructions ul{
   text-decoration: none;
 }
 
-#download a:hover, #authors a:hover {
+#download a:hover, #authors a:hover, #authors #screencast a:hover {
   text-decoration: underline;
 }
 

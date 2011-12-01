@@ -135,20 +135,27 @@ body, #instructions ul{
 }
 
 #download {
-  width: 460px;
-  margin-right: 65px;
+  width: 425px;
+  margin-right: 50px;
 }
 
 #authors {
-  width: 170px;
+  width: 220px;
 }
 
 #download h2, #authors h2 {
   font-size: 16px;
   color: #AEA486;
   font-weight: normal;
-  margin-top: 45px;
   margin-bottom: 0;
+}
+
+#download h2, #authors h2:first {
+  margin-top: 45px;
+}
+
+#authors h2 {
+  margin-top: 20px;
 }
 
 #download p {
@@ -156,7 +163,7 @@ body, #instructions ul{
   margin-top: 4px;
 }
 
-#download a {
+#download a, #authors #screencast a {
   color: #cc9300;
   text-decoration: none;
   font-weight: bold;

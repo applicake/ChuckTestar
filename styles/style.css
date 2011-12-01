@@ -129,7 +129,7 @@ body, #instructions ul{
   margin-top: -164px;
 }
 
-#download, #authors {
+#download, #meta {
   display: inline-block;
   vertical-align: top;
 }
@@ -139,31 +139,33 @@ body, #instructions ul{
   margin-right: 50px;
 }
 
-#authors {
+#meta {
   width: 220px;
 }
 
-#download h2, #authors h2 {
+#credits h2 {
   font-size: 16px;
   color: #AEA486;
   font-weight: normal;
   margin-bottom: 0;
 }
 
-#download h2, #authors h2:first {
+#download h2, #screencast h2 {
   margin-top: 45px;
 }
 
 #authors h2 {
-  margin-top: 20px;
+  margin-top: 0;
+  line-height: 36px;
 }
 
-#download p {
+#download p, #screencast p{
   line-height: 36px;
   margin-top: 4px;
+  margin-bottom: 0;
 }
 
-#download a, #authors #screencast a {
+#download a, #screencast a {
   color: #cc9300;
   text-decoration: none;
   font-weight: bold;
@@ -174,17 +176,21 @@ body, #instructions ul{
   text-decoration: none;
 }
 
-#download a:hover, #authors a:hover, #authors #screencast a:hover {
+#credits a:hover {
   text-decoration: underline;
 }
 
 
 #authors dl {
-  margin-top: 9px;
+  margin-top: 3px;
+}
+
+#authors dd {
+  padding-top: 4px;
 }
 
 #download code {
-  margin-top: 16px;
+  margin-top: 10px;
   display: block;
   background-color: #4e4732;
   color: white;

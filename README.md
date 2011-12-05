@@ -1,4 +1,4 @@
-# Chuck testr RSpec formatter
+# ChuckTestar RSpec formatter
 
 The gem is a game changer... Nope! It's just **Chuck Testar - Chuck's Testa RSpec formatter**
 
@@ -13,6 +13,8 @@ If you are using bundler, add this to your `Gemfile`:
     gem 'ChuckTestar'
 
 Or install the gem manually with `gem install ChuckTestar`.
+
+If you're on OSX and use Growl then you may want to install `growl_notify` gem, too.
 
 ## Usage
 
